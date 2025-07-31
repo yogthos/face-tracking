@@ -11,6 +11,11 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../index.html'));
 });
 
+// Handle all other routes by serving index.html (for SPA routing)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../index.html'));
+});
+
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
