@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = 3000;
+const port = 3001;
 
 // Serve static files from the 'models' directory
 app.use('/models', express.static(path.join(__dirname, '../models')));
