@@ -4,16 +4,25 @@
   "description": "A face tracking application using face-api.js",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "face-api.js": "^0.22.2",
-    "canvas": "^2.8.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "vite": "^4.3.9"
   },
   "keywords": [
     "face-tracking",
     "face-api",
-    "computer-vision"
+    "computer-vision",
+    "react",
+    "vite"
   ],
   "author": "Your Name",
   "license": "MIT"
