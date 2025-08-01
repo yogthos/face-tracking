@@ -10,14 +10,21 @@ export default defineConfig({
   server: {
     port: 3000,
     fs: {
-      allow: ['../models', '../src', './models', './src']
+      allow: ['../models', '../src']
     },
     proxy: {
       '/models': {
         target: 'http://localhost:3001',
         changeOrigin: true,
         secure: false,
-        rewrite: (path) => path.replace(/^\/models/, '')
+        rewrite: (path) => path.replace(/^\/models/, '/models'),
+        configure: (proxy) => {
+          // Handle model file requests properly
+          proxy.on('error', (err, req, res) => {
+            console.error('Proxy error:', err);
+            res.status(500).send('Proxy error occurred');
+          });
+        }
       }
     }
   },
