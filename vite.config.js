@@ -17,7 +17,7 @@ export default defineConfig({
         target: 'http://localhost:3001',
         changeOrigin: true,
         secure: false,
-        rewrite: (path) => path.replace(/^\/models/, '/models'),
+        rewrite: (path) => path.replace(/^\/models/, ''),
         configure: (proxy) => {
           // Handle model file requests properly
           proxy.on('error', (err, req, res) => {
