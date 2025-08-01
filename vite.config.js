@@ -8,10 +8,7 @@ export default defineConfig({
     outDir: 'dist'
   },
   server: {
-    port: 3000,
-    fs: {
-      allow: ['../models', '../src']
-    }
+    port: 3000
   },
   publicDir: 'public',
   optimizeDeps: {
