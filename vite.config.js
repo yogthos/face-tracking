@@ -10,7 +10,7 @@ export default defineConfig({
   server: {
     port: 3000,
     fs: {
-      allow: ['../models', '../src', './models', './src']
+      allow: ['../models', '../src']
     }
   },
   publicDir: 'public',
