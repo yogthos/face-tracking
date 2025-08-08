@@ -1,7 +1,7 @@
 {
-  "name": "face-tracking-app",
+  "name": "opencv-face-tracking-app",
   "version": "1.0.0",
-  "description": "A face tracking application using face-api.js",
+  "description": "A face tracking application using OpenCV.js",
   "main": "src/index.js",
   "scripts": {
     "dev": "vite",
@@ -10,18 +10,18 @@
     "start:server": "node src/server.js"
   },
   "dependencies": {
-    "face-api.js": "^0.22.2",
+    "@techstark/opencv-js": "^4.11.0-release.1",
+    "express": "^4.18.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "express": "^4.18.2"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.0",
-    "vite": "^4.3.9"
+    "vite": "^7.1.1"
   },
   "keywords": [
     "face-tracking",
-    "face-api",
+    "opencv",
     "computer-vision",
     "react",
     "vite"
